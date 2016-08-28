@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5620da9675e0d0f1"></script>
+
+<body>
+
+<div class="w3-container" ng-app="converterApp" ng-controller="converterCtrl">
+
+<h1>Calculadora Interactiva de cambio de Pesos Chilenos a Bol&iacute;vares y viceversa</h1>
+<h2>Servicio cortes&iacute;a del sitio <a href="www.naguaraenchile.com">naguarenchile.com</a></h2>
+<center>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- naguaraenchile_970x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-9813995087532973"
+     data-ad-slot="9861536649"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+
+<div class="w3-container w3-half">
+  <h2>Cambio de Pesos a Bol&iacute;vares</h2>
+  Cantidad de Pesos que quieres Cambiar: <input type="number" ng-model="quantity">
+<br><br>
+<div id='resultado' class="w3-container w3-padding-large w3-pale-blue w3-leftbar w3-border-blue" style='width:100%'>
+	  <h5>Por CLP {{quantity | number }} vas a recibir en Bol&iacute;vares</h5>
+	  <p>{{((1/dolarobservado)*dolarve)*quantity | number}} Bs a tasa observado</p>
+	  <p>{{((1/dolarintercambio)*dolarve)*quantity | number}} Bs a tasa acuerdo</p>
+</div>
+</div>
+<div class="w3-container w3-half">
+  <h2>Cambio de Bol&iacute;vares a Pesos</h2>
+  Cantidad de Bol&iacute;vares que quieres Cambiar: <input type="number" ng-model="quantity1">
+<br><br>
+<div id='resultado' class="w3-container w3-padding-large w3-pale-blue w3-leftbar w3-border-blue" style='width:100%'>
+	  <h5>Por BSF {{quantity1 | number }} vas a recibir en Pesos Chilenos</h5>
+	  <p>{{((1/dolarve)*dolarobservado)*quantity1 | number}} Bs a tasa observado</p>
+	  <p>{{((1/dolarve)*dolarintercambio)*quantity1 | number}} Bs a tasa acuerdo</p>
+</div>
+</div>
+<!--<p><b>Total en Bolivares a recibir:</b> {{((1/dolarobservado)*dolarve)*quantity | number}}</p>  -->
+
+<center>
+<h3>Comparte en tus redes sociales</h3>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox"></div>
+<div>
+	<h3>Si deseas colaborar con el mantenimiento de este servicio brindame un cafecito</h3>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="2AWX24GBQJN4U">
+	<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
+</center>
+<center>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- naguaraenchile_728x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9813995087532973"
+     data-ad-slot="8390293442"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+
+</div>
+<script src="aplicacion.js"></script>
+<script src="controlador.js"></script>
+</body>
+</html>
